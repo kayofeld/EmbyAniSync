@@ -4,6 +4,24 @@ This has since gone through a large re-design to have a bit of it's own identity
 
 Note: This project is not dead, I just haven't really had any need to work on it, just seems to work.
 
+## Running with Docker
+
+Create a ``docker-compose.yaml`` file or copy it to Portainer / Dockge / ...
+```yaml
+services:
+  emby-ani-sync:
+    image: ghcr.io/bpwhelan/emby-ani-sync
+    container_name: emby-ani-sync
+    ports:
+      - 8081:8081 # change left side of ":" to avoid port conflicts
+    volumes:
+      - /mnt/your-host-path/emby-ani-sync/:/embyanisync
+```
+Start the compose if you created the file:
+```bash
+docker compose up -d
+```
+
 ## Setup
 
 ### Step 1 - Install Python
