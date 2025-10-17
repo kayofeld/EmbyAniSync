@@ -122,9 +122,9 @@ Request Content type should be `application/json`
 Create a ``docker-compose.yaml`` file or copy it to Portainer / Docker / ...
 ```yaml
 services:
-  emby-ani-sync:
-    image: ghcr.io/bpwhelan/emby-ani-sync
-    container_name: emby-ani-sync
+  embyanisync:
+    image: ghcr.io/bpwhelan/embyanisync
+    container_name: embyanisync
     ports:
       - 8081:8081 # change left side of ":" to avoid port conflicts
     volumes:
@@ -234,4 +234,5 @@ https://github.com/Beannsss/EmbyAniSync/issues
 
 If you've benefited from this or any of my other projects, please consider supporting my work
 via [Github Sponsors](https://github.com/sponsors/bpwhelan) or [Ko-fi.](https://ko-fi.com/beangate)
+
 
